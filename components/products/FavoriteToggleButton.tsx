@@ -6,6 +6,7 @@ interface IProps {
 }
 
 export const FavoriteToggleButton = ({ productId }: IProps) => {
+  console.log(productId);
   return (
     <Button size="icon" variant="outline" className="p-2 cursor-pointer">
       <FaHeart />
