@@ -5,8 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { fetchAllProducts } from "@/utils/actions";
 import Link from "next/link";
-import { Heading5 } from "lucide-react";
-import { Product } from "@prisma/client";
 
 const ProductsContainer = async ({
   layout,
@@ -15,7 +13,6 @@ const ProductsContainer = async ({
   layout: string;
   search: string;
 }) => {
-  console.log("XX", search);
   const products = await fetchAllProducts({ search });
   const totalProducts = products.length;
   const searchTerm = search ? `&search=${search}` : "";

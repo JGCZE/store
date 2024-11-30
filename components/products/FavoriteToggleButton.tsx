@@ -5,7 +5,7 @@ interface IProps {
   productId: string;
 }
 
-export const FavoriteToggleButton = ({ productId }: IProps) => {
+export const FavoriteToggleButton = ({}: /* productId */ IProps) => {
   return (
     <Button size="icon" variant="outline" className="p-2 cursor-pointer">
       <FaHeart />

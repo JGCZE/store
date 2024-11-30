@@ -14,6 +14,7 @@ export const NavSearch = () => {
 
   const handleSearch = useDebouncedCallback((value: string) => {
     const params = new URLSearchParams(searchParams);
+
     if (value) {
       params.set("search", value);
     } else {
