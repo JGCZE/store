@@ -8,7 +8,7 @@ import AddToCart from "@/components/single-products/AddToCart";
 
 type tParams = Promise<{ id: string }>;
 
-const Product = async (props: { params: tParams }) => {
+const Product = async (props: { params: Promise<tParams> }) => {
   const { id } = await props.params;
   const product = await fetchSingleProduct(id);
   const { name, image, company, description, price } = product;
